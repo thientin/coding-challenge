@@ -1,6 +1,6 @@
 function rotateImage(mat) {
   let N = mat[0].length
-  for(let i = 0; i < N / 2; i ++) {
+  for(let i = 0; i < parseInt(N / 2); i++) {
     for (let j = i; j < N-i -1; j++) {
       let temp = mat[i][j] 
       mat[i][j] = mat[N - 1 - j][i] 
@@ -12,8 +12,8 @@ function rotateImage(mat) {
 }
 function rotateImageKTimes(mat,k){
 	for(let i = 0; i < k % 4; i ++) {
-  	rotateImage(mat)
+  		rotateImage(mat)
 	}  
 }
 
-export {rotateImageKtimes}
+module.exports = {rotateImageKTimes}
